@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDNs</title>
+</head>
+<body>
+
+    <div id="root" class="root"></div>
+<!-- allows the react and reactDom APIs -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- order of injecting CDNs matter(Dev's code should be below the CDN links to work) -->
+<script>
+    const e1 = React.createElement('h1',{},'this is CDNs react code..!');
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(e1)
+</script>
+</body>
+</html>
